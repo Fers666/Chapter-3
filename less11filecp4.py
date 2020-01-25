@@ -33,7 +33,7 @@ lst=[]
 sm=0
 with open('C:/github/file/dataset_3363_4.txt') as inf:
     for l in inf :# цикл всех строк
-        l=l.split(';')
+        l=l.strip().split(';')
         for i in l[1::]: #цикл с первого элемента , что бы не считать фамилии
             sm+=int(i)# сумма всех балов
         l.append(sm/3)
